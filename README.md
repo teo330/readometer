@@ -5,15 +5,7 @@ To see it in action (and use it) go to https://teo330.github.io/readometer
 
 :warning:REPOSITORY UNDER DEVELOPMENT
 
-<img alt="W3C Validation" src="https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fteo330.github.io%2Freadometer">
-
-<img alt="Website status" src="https://img.shields.io/website?down_color=critical&down_message=down&up_color=success&up_message=up&url=https%3A%2F%2Fteo330.github.io%2Freadometer">
-
-<img alt="GitHub license" src="https://img.shields.io/github/license/teo330/readometer">
-
-<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/teo330/readometer">
-
-<a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fteo330%2Freadometer"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fteo330%2Freadometer"></a>
+<img alt="W3C Validation" src="https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fteo330.github.io%2Freadometer"> <img alt="Website status" src="https://img.shields.io/website?down_color=critical&down_message=down&up_color=success&up_message=up&url=https%3A%2F%2Fteo330.github.io%2Freadometer"> <img alt="GitHub license" src="https://img.shields.io/github/license/teo330/readometer"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/teo330/readometer"> <a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fteo330%2Freadometer"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fteo330%2Freadometer"></a>
 
 * [Features and roadmap](#features-and-roadmap)
 * [Why another read-time calculator](why-another-read-time-calculator)
@@ -24,7 +16,7 @@ To see it in action (and use it) go to https://teo330.github.io/readometer
 ## [Features and roadmap](#features-and-roadmap)
 - [ ] Add multi-language time-to-read support
 - [ ] Add multi-language support to the webpage
-- [ ] Remove brakets from word count
+- [ ] Remove ` . `, ` , `, ` : `, ` ; `, ` @ `, ` # `, ` ? `, ` ' `, ` $ `, ` % `, ` £ `, ` " `, ` ! `, ` € `, ` ^ `, ` < `, ` > `, ` ~ `, ` - `, ` _ `, ` / `, ` \ `, ` | `, ` ) `, ` ( `, ` ] `, ` ] `, ` { `, ` } ` from word count
 - [x] Display maximum and minimum estimated read time
 - [x] Display the text's total number of words
 - [x] Display average estimated text read time
