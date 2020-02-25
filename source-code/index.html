@@ -37,7 +37,7 @@
 		</main>
 
 		<aside class="aside" role="complementary">
-			
+
 			<div>Number of words: <span id="spanWords"></span></div>
 
 			<div>Average read time: <span id="avgRead"></span> <span class="areAvgMins"></span></div>
@@ -49,6 +49,15 @@
 		</aside>
 
 		<footer class="footer" role="contentinfo">
+
+			<a id="news" href="./news" target="_blank"><span style="color: orange; font-weight: 600;">:~/</span><span style="color: orange;">News</span>$ <span id="blinker">&#9610;</span></a>
+			<script>
+				var blink_speed = 1000;
+				var t = setInterval(function () {
+					var blinker = document.getElementById('blinker');
+					blinker.style.visibility = (blinker.style.visibility == 'hidden' ? '' : 'hidden');
+				}, blink_speed);
+			</script>
 
 			<small>This tool is trackers/cookies free and open source, released under <a rel="license" target="_blank" href="https://github.com/teo330/readometer/blob/master/LICENSE">MIT License</a>. The source code is hosted on GitHub at <a rel="nofollow" target="_blank" href="https://github.com/teo330/readometer">teo330/readometer</a>.</small>
 

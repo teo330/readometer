@@ -81,7 +81,7 @@ main {
 	border: none;
 	outline: none;
 	resize: none;
-	
+
 	overflow: auto;
 	/* Scrollbar style for Firefox below */
 	scrollbar-width: thin;
@@ -144,6 +144,13 @@ footer {
 	/* Scrollbar style for Firefox below */
 	scrollbar-width: thin;
 	scrollbar-color: white rgba(255, 255, 255, 0.2);
+}
+
+#news {
+	color: white;
+	text-decoration: none;
+	font-family: "Verdana", "Geneva", sans-serif;
+	font-weight: 400;
 }
 
 footer small {
