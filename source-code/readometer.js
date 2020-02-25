@@ -6,31 +6,33 @@ function calcTime() {
 	var strTrim = textbox.trim();
 	console.log("strTrim: '" + strTrim + "'");
 
-	if (strTrim.includes("  ") == true) {
-		console.log("removing redundant whitespaces...");
-
-		var strRep = strTrim.replace(/\s\s+/g, " ");
-		console.log("temp Rep: '" + strRep + "'");
-	}
-	else {
-		console.log("no redundant whitespaces\nstrRep = strTrim");
-		strRep = strTrim;
-	}
-
-	if (strRep.includes("\n") == true) {
+	if (strTrim.includes("\n") == true) {
 		console.log("switching new lines with whitespaces...");
 
-		var strLines = strRep.replace(/\n+/g, " ");
+		var strLines = strTrim.replace(/\n+/g, " ");
+
 		console.log("temp Lines: '" + strLines + "'");
 	}
 	else {
-		console.log("no new line to be switched\nstrLines = strRep");
-		strLines = strRep;
+		console.log("no new line to be switched\nstrLines = strTrim");
+		strLines = strTrim;
 	}
 
-	console.log("strLines: '" + strLines + "'");
+	if (strLines.includes("  ") == true) {
+		console.log("removing redundant whitespaces...");
 
-	var totWords = strLines.split(" ")/*.length*/;
+		var strRep = strLines.replace(/\s\s+/g, " ");
+		console.log("temp Rep: '" + strRep + "'");
+	}
+	else {
+		console.log("no redundant whitespaces\nstrRep = strLines");
+		strRep = strLines;
+	}
+
+
+	console.log("strLines: '" + strRep + "'");
+
+	var totWords = strRep.split(" ")/*.length*/;
 	console.log("totWords: " + totWords);
 
 	totWords = totWords.length;
