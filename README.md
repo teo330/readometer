@@ -23,19 +23,20 @@ To see it in action (and use it) go to https://teo330.github.io/readometer
 - [x] Display average estimated text read time
 
 ## [Why another read-time calculator](#why-another-read-time-calculator)
-There are many others tools like this.
-However when I was looking for one, the first search result I got was of a stupidly developed tool.
-The problem with that tool is that you could easily joke it by writing two or more whitespaces together, and it would count them as words (and since the read time is calculated using the number of words, the time wouldn't be the right one).
-Read below how it works to understand why this tool is better and, in case you made a typing mistake, it won't count it as a word.
+There are many others tools like this one.
+However when I was looking for one, the first search results I got were of stupidly developed tools.
+The problem with those calculators is that you could easily joke it by writing two or more whitespaces together, and it would count them as words (and since the read time is calculated using the number of words, the time wouldn't be the right one).
+And the same by writing, for example, `( hi )`: they would count this as 3 words!
+Read below how this tool works to understand why it's better than the others.
 
 ## [How it works](#how-it-works)
 1. The program takes the text provided by the user in the textarea and create an equal string using JavaScript;
 
 2. It checks in the string there aren't whitespaces at the beginning or at the end. In case there are, it trims the string removing them;
 
-3. Then it checks if there are doubled (or more attached) whitespaces within the words of the string. If there are, it switches them with a single whitespace;
+3. Then it checks for new lines. If there are new lines in the given text, the program switches them with a single whitespace in order to have a single line string;
 
-4. The last check is for new lines. If there are new lines in the given text, the program switches them with a single whitespace;
+4. The last check is for doubled (or more attached) whitespaces within the words of the string. If there are, it switches them with a single whitespace;
 
 5. Now the program takes the string and it splits any word based on the whitespace and create an array with the words (`Hey John` gets cutted on the ` ` and becomes `Hey,John`);
 
