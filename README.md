@@ -16,7 +16,7 @@ To see it in action (and use it) go to https://teo330.github.io/readometer
 ## [Features and roadmap](#features-and-roadmap)
 - [ ] Add multi-language time-to-read support
 - [ ] Add multi-language support to the webpage
-- [ ] Remove ` . `, ` , `, ` : `, ` ; `, ` @ `, ` # `, ` ? `, ` ' `, ` $ `, ` % `, ` £ `, ` " `, ` ! `, ` € `, ` ^ `, ` < `, ` > `, ` ~ `, ` - `, ` _ `, ` / `, ` \ `, ` | `, ` ) `, ` ( `, ` ] `, ` ] `, ` { `, ` } ` from word count
+- [ ] Remove ` . `, ` , `, ` : `, ` ; `, ` @ `, ` # `, ` ? `, ` ' `, ` $ `, ` % `, ` £ `, ` " `, ` ! `, ` € `, ` ^ `, ` < `, ` > `, ` ~ `, ` - `, ` _ `, ` / `, ` \ `, ` | `, ` ) `, ` ( `, ` ] `, ` ] `, ` { `, ` } `, ` ° `, ` + ` from word count
 - [x] Display maximum and minimum estimated read time
 - [x] Display the text's total number of words
 - [x] Display average estimated text read time
