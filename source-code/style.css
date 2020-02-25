@@ -1,1 +1,185 @@
+* {
+	margin: 0;
+	padding: 0;
+}
 
+body {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(11, 1fr);
+
+	width: 100vw;
+	height: 100vh;
+
+	font-family: "Giorgia", serif;
+	font-size: 1rem;
+	font-weight: 400;
+
+	background-color: rgb(255,200,200);
+}
+
+.header {
+	grid-column: 1 / 5;
+	grid-row: 1 / 2;
+}
+
+.aside {
+	grid-column: 1 / 1;
+	grid-row: 2 / 6;
+
+	color: white;
+	background-color: black;
+}
+
+.main {
+	grid-column: 2 / 5;
+	grid-row: 2 / 12;
+}
+
+.footer {
+	grid-column: 1 / 1;
+	grid-row: 6 / 12;
+
+	color: white;
+	background-color: black;
+}
+
+header {
+	padding: 0.5rem 0 0.5rem 0;
+	margin: 0 1.5rem 0 1.5rem;
+
+	border-bottom: 2px solid black;
+}
+
+header h1 {
+	font-size: 1.8rem;
+	font-weight: 800;
+}
+
+header h2 {
+	font-size: 0.9rem;
+	font-weight: 300;
+}
+
+main {
+	margin: 0;
+	padding: 0;
+}
+
+#textbox {
+	font-family: "Verdana", "Geneva", sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 1.5rem;
+
+	display: block;
+	height: calc(100% - 6rem);
+	width: calc(100% - 3rem);
+	padding: 1rem 1.5rem 1rem 1.5rem;
+
+	background-color: rgba(0, 0, 0, 0);
+	border: none;
+	outline: none;
+	resize: none;
+
+	overflow: auto;
+	/* Scrollbar style for Firefox below */
+	scrollbar-width: thin;
+	scrollbar-color: black rgba(0, 0, 0, 0.2);
+}
+
+/* Custom background color of selected text */
+::selection {
+	color: white;
+	background: black;
+}
+/* Code for Firefox */
+::-moz-selection {
+	color: white;
+	background: black;
+}
+
+#button {
+	font-family: "Giorgia", serif;
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 0.08rem;
+	text-align: center;
+
+	color: black;
+	background-color: white;
+	border: 0.1rem solid black;
+
+	display: block;
+	padding: 0.4rem 1.3rem;
+	margin-left: calc(75vw / 2);
+	transform: translate(-50%, -50%);
+	margin-top: 1.5rem;
+
+	cursor: pointer;
+	transition: 0.1s;
+}
+
+#button:hover {
+	border: 0.2rem solid black;
+}
+
+aside {
+	padding: 1.3rem 1rem;
+	margin-left: 1.5rem;
+	overflow: auto;
+	/* Scrollbar style for Firefox below */
+	scrollbar-width: thin;
+	scrollbar-color: white rgba(225, 255, 255, 0.2);
+}
+
+aside div {
+	margin-bottom: 1rem;
+}
+
+footer {
+	padding: 1rem;
+	margin-left: 1.5rem;
+	overflow: auto;
+	/* Scrollbar style for Firefox below */
+	scrollbar-width: thin;
+	scrollbar-color: white rgba(255, 255, 255, 0.2);
+}
+
+footer small {
+	display: block;
+	line-height: 1.2rem;
+	letter-spacing: 0.01rem;
+
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+footer small a {
+	color: white;
+	text-decoration: underline;
+}
+
+.badge {
+	margin-top: 0.3rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
