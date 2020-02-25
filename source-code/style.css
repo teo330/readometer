@@ -81,7 +81,7 @@ main {
 	border: none;
 	outline: none;
 	resize: none;
-
+	
 	overflow: auto;
 	/* Scrollbar style for Firefox below */
 	scrollbar-width: thin;
