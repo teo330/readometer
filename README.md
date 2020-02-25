@@ -14,6 +14,7 @@ To see it in action (and use it) go to https://teo330.github.io/readometer
 * [Bugs and problems](#bugs-and-problems)
 
 ## [Features and roadmap](#features-and-roadmap)
+[Suggest a new feature](https://github.com/teo330/readometer/issues/new)
 - [ ] Add multi-language time-to-read support
 - [ ] Add multi-language support to the webpage
 - [ ] Remove ` . `, ` , `, ` : `, ` ; `, ` @ `, ` # `, ` ? `, ` ' `, ` $ `, ` % `, ` £ `, ` " `, ` ! `, ` € `, ` ^ `, ` < `, ` > `, ` ~ `, ` - `, ` _ `, ` / `, ` \ `, ` | `, ` ) `, ` ( `, ` ] `, ` ] `, ` { `, ` } `, ` ° `, ` + `, ` ¿ `, ` ¡ `, ` ¦ ` from word count
