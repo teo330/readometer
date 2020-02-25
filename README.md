@@ -67,4 +67,4 @@ Thanks to the MIT License, you can freerly do it, but remeber to provide a link 
 [MIT License](https://github.com/teo330/readometer/blob/master/LICENSE)
 
 ## [Bugs and problems](#bugs-and-problems)
-If you have any problem or found a bug, please [open an issue](https://github.com/teo330).
+If you have any problem or found a bug, please [open a new issue](https://github.com/teo330/readometer/issues/new).
