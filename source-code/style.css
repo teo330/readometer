@@ -15,7 +15,7 @@ body {
 	font-size: 1rem;
 	font-weight: 400;
 
-	background-color: rgb(255,200,200);
+	background-color: rgb(250,200,200);
 }
 
 .header {
@@ -159,7 +159,7 @@ footer small {
 	letter-spacing: 0.01rem;
 
 	margin-top: 1rem;
-	margin-bottom: 2rem;
+	margin-bottom: 0.6rem;
 }
 
 footer small a {
