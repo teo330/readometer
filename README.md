@@ -3,13 +3,12 @@ A [smart](#why-another-read-time-calculator) tool to helps you estimate the read
 
 To see it in action (and use it) go to https://teo330.github.io/readometer
 
-:warning:REPOSITORY UNDER DEVELOPMENT
-
 <img alt="W3C Validation" src="https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fteo330.github.io%2Freadometer"> <img alt="Website status" src="https://img.shields.io/website?down_color=critical&down_message=down&up_color=success&up_message=up&url=https%3A%2F%2Fteo330.github.io%2Freadometer"> <img alt="GitHub license" src="https://img.shields.io/github/license/teo330/readometer"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/teo330/readometer"> <a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fteo330%2Freadometer"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fteo330%2Freadometer"></a>
 
 * [Features and roadmap](#features-and-roadmap)
 * [Why another read-time calculator](why-another-read-time-calculator)
 * [How it works](#how-it-works)
+* [Other notes](#other-notes)
 * [License](#license)
 * [Bugs and problems](#bugs-and-problems)
 
@@ -17,7 +16,7 @@ To see it in action (and use it) go to https://teo330.github.io/readometer
 [Suggest a new feature](https://github.com/teo330/readometer/issues/new)
 - [ ] Add multi-language time-to-read support
 - [ ] Add multi-language support to the webpage
-- [ ] Remove ` . `, ` , `, ` : `, ` ; `, ` @ `, ` # `, ` ? `, ` ' `, ` $ `, ` % `, ` £ `, ` " `, ` ! `, ` € `, ` ^ `, ` < `, ` > `, ` ~ `, ` - `, ` _ `, ` / `, ` \ `, ` | `, ` ) `, ` ( `, ` ] `, ` ] `, ` { `, ` } `, ` ° `, ` + `, ` ¿ `, ` ¡ `, ` ¦ `, ` ¬ `, ` ± `, ` \` ` from word count
+- [x] Remove ` . `, ` , `, ` : `, ` ; `, ` @ `, ` # `, ` ? `, ` ' `, ` $ `, ` % `, ` £ `, ` " `, ` ! `, ` € `, ` ^ `, ` < `, ` > `, ` ~ `, ` - `, ` _ `, ` / `, ` \ `, ` | `, ` ) `, ` ( `, ` ] `, ` ] `, ` { `, ` } `, ` ° `, ` + `, ` ¿ `, ` ¡ `, ` ¦ `, ` ¬ `, ` ± `, ` \` ` from word count
 - [x] Display maximum and minimum estimated read time
 - [x] Display the text's total number of words
 - [x] Display average estimated text read time
@@ -25,25 +24,28 @@ To see it in action (and use it) go to https://teo330.github.io/readometer
 ## [Why another read-time calculator](#why-another-read-time-calculator)
 There are many others tools like this one.
 However when I was looking for one, the first search results I got were of stupidly developed tools.
-The problem with those calculators is that you could easily joke it by writing two or more whitespaces together, and it would count them as words (and since the read time is calculated using the number of words, the time wouldn't be the right one).
-And the same by writing, for example, `( hi )`: they would count this as 3 words!
+The problem with those calculators is that you could easily joke it by writing two or more whitespaces together or using special characters, and they would count them as words (and since the read time calculation is based on the number of words, the time wouldn't be the right one).
 Read below how this tool works to understand why it's better than the others.
 
 ## [How it works](#how-it-works)
-1. The program takes the text provided by the user in the textarea and create an equal string using JavaScript;
+1. The program takes the text provided by the user in the textarea and create a string;
 
-2. It checks in the string there aren't whitespaces at the beginning or at the end. In case there are, it trims the string removing them;
+2. It checks for new lines. If there are new lines in the given text, the program switches them with a single whitespace in order to have a single line string;
 
-3. Then it checks for new lines. If there are new lines in the given text, the program switches them with a single whitespace in order to have a single line string;
+3. Then there's a "big" loop that takes all the special characters in the `specialCharacters` array and checks whether there are some in the string. If there are, the program switches them with a single whitespace in order to have a single line string;
 
-4. The last check is for doubled (or more attached) whitespaces within the words of the string. If there are, it switches them with a single whitespace;
+4. It looks for doubled (or more attached) whitespaces in the string. If there are, it replaces them with a single whitespace;
 
-5. Now the program takes the string and it splits any word based on the whitespace and create an array with the words (`Hey John` gets cutted on the ` ` and becomes `Hey,John`);
+5. The last check is for additional whitespaces at the beginning or at the end of the string. In case there are, it trims the string removing them;
 
-6. It counts the total number of elements of the array (the words), it divides it with the average WPM for the english language and it prints the result on the screen.
+6. Now the program takes the string and it splits any word based on the whitespace, and create an array with the words (`Hey John` gets cutted on the ` ` and becomes `Hey,John`);
+
+6. It counts the number of elements of the array (the words), it divides it with the average WPM for the english language and it prints the result on the screen.
+
+## [Other notes](#other-notes)
 
 WPM means Words Per Minute and it's the average read speed of a person given a specific language (each language is different so it has its own WPM rate).
-
+---
 The reason the program removes all the useless whitespaces is that computers are stupid and, since they use a single whitespace to count a word, if there would be, lets say, 3 whitespaces between 2 words like `Hey   John`, the array created would look like `Hey, ,John` and the counted words would be 3 (`Hey`, `whitespace`, `John`).
 The problem with new lines is that computers count the first word of the new line as it would be part of the last word of the line before, so if we would have something like:
 ```
@@ -51,14 +53,25 @@ Hey
 John
 ```
 the array created would look like `HeyJohn`, so 1 word.
-
-Words separated by `'` are counted as one (`it's` = 1 word). That's beacuse many of them are short and read toghether so the effective read speed is the same of a single word.
-Same for words divided by '-'. They are often slang or well known words and they are visibly linked, so the reader will probably need a shorter amount of time to read each of them.
-By the way, if you want you can customize the source code (the original non-minified JavaScript file is in the `/source-code` folder of this repository).
-Thanks to the MIT License, you can freerly do it, but remeber to provide a link to this repository (even if you change part of the code) in case you want to use/publish it.
+---
+The reason at line 87-90 of the `/source-code/readometer.js` file the code is...
+```javascript
+let totWords = textbox.split(" ")/*.length*/;
+console.log("totWords: " + totWords);
+totWords = totWords.length;
+console.log("totWords length: " + totWords);
+```
+instead of the shorter...
+```javascript
+let totWords = textbox.split(" ").length;
+console.log("totWords length: " + totWords);
+```
+is that it's easier to debug it, especially while dealing with the regular expressions (line 67, same file) and you want to be sure the syntax is correct so it's helpful to see the single words (array elememts) before they get counted.
 
 ## [License](#license)
 [MIT License](https://github.com/teo330/readometer/blob/master/LICENSE)
+Thanks to the MIT License, you are free to use and share and do almost whatever you want with the code (more details on the link), but remembering to link to this repository (even if you use just a part of the code).
+By the way if you want to make some upgrade, you are welcome. Feel free to open an Issue or Pull Request ;)
 
 ## [Bugs and problems](#bugs-and-problems)
 If you have any problem or found a bug, please [open a new issue](https://github.com/teo330/readometer/issues/new).
