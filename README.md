@@ -44,17 +44,17 @@ Read below how this tool works to understand why it's better than the others.
 
 ## [Other notes](#other-notes)
 
-WPM means Words Per Minute and it's the average read speed of a person given a specific language (each language is different so it has its own WPM rate).
----
-The reason the program removes all the useless whitespaces is that computers are stupid and, since they use a single whitespace to count a word, if there would be, lets say, 3 whitespaces between 2 words like `Hey   John`, the array created would look like `Hey, ,John` and the counted words would be 3 (`Hey`, `whitespace`, `John`).
+* WPM means Words Per Minute and it's the average read speed of a person given a specific language (each language is different so it has its own WPM rate).
+
+* The reason the program removes all the useless whitespaces is that computers are stupid and, since they use a single whitespace to count a word, if there would be, lets say, 3 whitespaces between 2 words like `Hey   John`, the array created would look like `Hey, ,John` and the counted words would be 3 (`Hey`, `whitespace`, `John`).
 The problem with new lines is that computers count the first word of the new line as it would be part of the last word of the line before, so if we would have something like:
 ```
 Hey
 John
 ```
 the array created would look like `HeyJohn`, so 1 word.
----
-The reason at line 87-90 of the `/source-code/readometer.js` file the code is...
+
+* The reason at line 87-90 of the `/source-code/readometer.js` file the code is...
 ```javascript
 let totWords = textbox.split(" ")/*.length*/;
 console.log("totWords: " + totWords);
