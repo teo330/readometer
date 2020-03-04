@@ -26,9 +26,6 @@ body {
 .aside {
 	grid-column: 1 / 3;
 	grid-row: 2 / 6;
-
-	color: white;
-	background-color: black;
 }
 
 .main {
@@ -39,9 +36,6 @@ body {
 .footer {
 	grid-column: 1 / 3;
 	grid-row: 6 / 12;
-
-	color: white;
-	background-color: black;
 }
 
 header {
@@ -131,6 +125,9 @@ aside {
 	/* Scrollbar style for Firefox below */
 	scrollbar-width: thin;
 	scrollbar-color: white rgba(225, 255, 255, 0.2);
+
+	color: white;
+	background-color: black;
 }
 
 aside div {
@@ -144,6 +141,9 @@ footer {
 	/* Scrollbar style for Firefox below */
 	scrollbar-width: thin;
 	scrollbar-color: white rgba(255, 255, 255, 0.2);
+
+	color: white;
+	background-color: black;
 }
 
 #info {
@@ -212,7 +212,7 @@ footer small a {
 	box-shadow: 0 0 0.5rem rgb(80, 80, 80);
 
 	cursor: pointer;
-	transition: 0.2s;
+	transition: 0.15s;
 }
 
 .noscript button:hover {
@@ -231,22 +231,134 @@ footer small a {
 	outline-offset: 0.3rem;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 62rem) {
+	body {
+		display: grid;
+		grid-template-areas: "header"
+							"aside"
+							"main"
+							"footer";
 
-}
+		grid-template-rows: auto;
+		max-width: 100vw;
+		height: auto;
+		max-height: none;
+	}
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+	.header {
+		grid-area: header;
+	}
 
-}
+	.aside {
+		grid-area: aside;
+	}
 
-/* Medium devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+	.main {
+		grid-area: main;
+	}
 
-}
+	.footer {
+		grid-area: footer;
+	}
 
-/* Large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+	header {
+		padding: 1rem;
+		margin: 0rem;
 
+		width: calc(100vw - 2rem);
+	}
+
+	header h1 {
+		font-size: 1.6rem;
+		font-weight: 800;
+	}
+
+	header h2 {
+		font-size: 0.9rem;
+		font-weight: 300;
+	}
+
+	main {
+		margin: 0;
+		padding: 0;
+
+		width: 100vw;
+	}
+
+	#textbox {
+		font-family: "Verdana", "Geneva", sans-serif;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1.5rem;
+
+		display: block;
+		width: calc(100% - 2rem);
+		padding: 1rem;
+
+	}
+
+	#button {
+		margin-left: calc(100vw / 2);
+		transform: translateX(-50%);
+		margin-top: 0.4rem;
+
+		padding: 0.6rem 1.7rem;
+	}
+
+	aside {
+		padding: 0.5rem 1rem;
+		margin: 0;
+	}
+
+	aside div {
+		margin: 0.5rem 0 0.5rem 0;
+	}
+
+	footer {
+		padding: 1rem;
+		margin: 0;
+	}
+
+	footer small {
+		line-height: 1.2rem;
+		letter-spacing: 0.01rem;
+
+		margin: 1rem 0 0.6rem 0;
+	}
+
+	.badge {
+		margin-top: 0.3rem;
+	}
+
+	.noscript {
+		position: fixed;
+		margin-top: 0;
+		margin-left: -100vw;
+
+		width: calc(100vw - 1.5rem - 1rem);
+		height: calc(100vh - 2rem - 1rem);
+
+		padding: 1rem 1rem 1rem 0.5rem;
+		border: 0.5rem solid red;
+
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 1.3rem;
+	}
+
+	.noscript p {
+		padding-left: 0.5rem;
+	}
+
+	.noscript button {
+		width: calc(100vw - 3rem);
+		margin-left: 50%;
+		transform: translateX(-50%);
+
+		padding: 0.7rem 0.9rem;
+	}
+
+	.noscript-link {
+		margin-left: 0;
+	}
 }
