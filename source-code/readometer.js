@@ -1,62 +1,107 @@
+let specialCharacters = [
+	".",
+	",",
+	"-",
+	":",
+	";",
+	"·",
+	"@",
+	"#",
+	"?",
+	"'",
+	"$",
+	"%",
+	"£",
+	'"',
+	"!",
+	"€",
+	"^",
+	"<",
+	">",
+	"~",
+	"-",
+	"°",
+	"+",
+	"=",
+	"¿",
+	"¡",
+	"¦",
+	"¬",
+	"±",
+	"`",
+	"*",
+	"_",
+	"/",
+	"\\",
+	"|",
+	"(",
+	")",
+	"[",
+	"]",
+	"{",
+	"}"
+];
+
+console.log(specialCharacters.length);
+
 function calcTime() {
 	console.clear();
-	var textbox = document.getElementById("textbox").value;
+	let textbox = document.getElementById("textbox").value;
 	console.log("textbox: '" + textbox + "'");
 
 	if (textbox.includes("\n") == true) {
-		console.log("replacing new lines with whitespace from textbox (then str1)...");
+		console.log("replacing new lines with whitespace...");
 
-		var str1 = textbox.replace(/\n+/g, " ");
+		textbox = textbox.replace(/\n+/g, " ");
 
-		console.log("str1: '" + str1 + "'");
-	} else {
-		console.log("no new line to be replaced\nstr1 = textbox");
-		str1 = textbox;
+		console.log("textbox: '" + textbox + "'");
 	}
 
-	if (str1.includes(".") || str1.includes(",") || str1.includes("-") == true) {
-		console.log("replacing special characters from str1 (then str2)...");
+	console.log("ENTERING FOR LOOP...");
 
-		var str2 = str1.replace(/\.+|\,+|\s\-+|\-+\s|\s\-+\s/g, " ");
-		console.log("str2: '" + str2 + "'");
-	} else {
-		console.log("no special characters to be replaced\nstr2 = str1");
-		str2 = str1
+	for (let i = 0; i < specialCharacters.length; i++) {
+
+		if (textbox.includes(specialCharacters[i]) == true) {
+			console.log("replacing special characters...");
+
+			textbox = textbox.replace(/[.,-:;·@#?'$%£"!€^<>~-°+=¿¡¦¬±`*\_\/\\\|\(\)\[\]\{\}]+/g, " ");
+
+			console.log("textbox: '" + textbox + "'");
+		}
+
 	}
 
-	if (str2.includes("  ") == true) {
-		console.log("removing redundant whitespaces from str2 (then str1)...");
 
-		var str1 = str2.replace(/\s\s+/g, " ");
-		console.log("str1 '" + str1 + "'");
-	} else {
-		console.log("no redundant whitespaces to be removed\nstr1 = str2");
-		str1 = str2;
+	if (textbox.includes("  ") == true) {
+		console.log("removing redundant whitespaces...");
+
+		textbox = textbox.replace(/\s\s+/g, " ");
+
+		console.log("textbox '" + textbox + "'");
 	}
 
-	console.log("trimming the whitespaces from str1 (then str2)...");
-	var str2 = str1.trim();
-	console.log("str2: '" + str2 + "'");
+	console.log("trimming the whitespaces...");
+	textbox = textbox.trim();
+	console.log("textbox: '" + textbox + "'");
 
-	var totWords = str2.split(" ")/*.length*/;
+	let totWords = textbox.split(" ")/*.length*/;
 	console.log("totWords: " + totWords);
-
 	totWords = totWords.length;
 	console.log("totWords length: " + totWords);
 
-	var spanWords = document.getElementById("spanWords");
+	let spanWords = document.getElementById("spanWords");
 	spanWords.innerHTML = totWords;
 
-	var wpmAvg = 200;
-	var wpmMin = 220;
-	var wpmMax = 180;
+	let wpmAvg = 200;
+	let wpmMin = 220;
+	let wpmMax = 180;
 
-	var avgRead = document.getElementById("avgRead");
+	let avgRead = document.getElementById("avgRead");
 	console.log(avgRead);
 	avgRead.innerHTML = "~" + (parseInt(totWords / wpmAvg) + 1);
 
 	console.log("going to choose avg MIN/MINS...");
-	var areAvgMins = document.getElementById("areAvgMins");
+	let areAvgMins = document.getElementById("areAvgMins");
 	if (parseInt(totWords / wpmAvg) == 0) {
 		console.log("joined avg loop MIN...");
 
@@ -67,12 +112,12 @@ function calcTime() {
 		areAvgMins.innerHTML = "mins";
 	}
 
-	var minRead = document.getElementById("minRead");
+	let minRead = document.getElementById("minRead");
 	console.log(minRead);
 	minRead.innerHTML = "~" + (parseInt(totWords / wpmMin) + 1);
 
 	console.log("going to choose min MIN/MINS...");
-	var areMinMins = document.getElementById("areMinMins");
+	let areMinMins = document.getElementById("areMinMins");
 	if (parseInt(totWords / wpmMin) == 0) {
 		console.log("joined min loop MIN...");
 
@@ -83,12 +128,12 @@ function calcTime() {
 		areMinMins.innerHTML = "mins";
 	}
 
-	var maxRead = document.getElementById("maxRead");
+	let maxRead = document.getElementById("maxRead");
 	console.log(maxRead);
 	maxRead.innerHTML = "~" + (parseInt(totWords / wpmMax) + 1);
 
 	console.log("going to choose max MIN/MINS...");
-	var areMaxMins = document.getElementById("areMaxMins");
+	let areMaxMins = document.getElementById("areMaxMins");
 	if (parseInt(totWords / wpmMax) == 0) {
 		console.log("joined max loop MIN...");
 
