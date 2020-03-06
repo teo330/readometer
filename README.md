@@ -1,5 +1,5 @@
 # readometer
-A [smart](#why-another-read-time-calculator) tool to helps you estimate the read-time of a document.
+A [smarter](#why-another-read-time-calculator) tool to helps you estimate the read-time of a document.
 
 To see it in action (and use it) go to https://teo330.github.io/readometer
 
