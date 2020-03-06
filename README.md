@@ -14,6 +14,7 @@ To see it in action (and use it) go to https://teo330.github.io/readometer
 
 ## [Features and roadmap](#features-and-roadmap)
 [Suggest a new feature](https://github.com/teo330/readometer/issues/new)
+- [ ] Add option to switch from eye-friendly background to light and dark ones
 - [ ] Add multi-language time-to-read support
 - [ ] Add multi-language support to the webpage
 - [x] Remove special characters from word count
