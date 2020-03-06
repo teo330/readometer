@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+		<title>Readometer | Teo330</title>
+
+		<meta name="author" content="Teo330">
+		<meta name="description" content="A powerfull tool to estimate the read-time of any text: articles, posts or documents.">
+		<meta name="keywords" content="calculate read time, estimated read time, readtime, read-time, article read time, post read time, document read time, text read time">
+		<meta name="robots" content="index,follow">
+		<link rel="canonical" href="https://teo330.github.io/readometer">
+
+		<link rel="shortcut icon" href="https://raw.githubusercontent.com/teo330/readometer/master/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="https://raw.githubusercontent.com/teo330/readometer/master/favicon.ico" type="image/x-icon">
+
+		<style>
+			*{margin:0;padding:0}body{display:grid;grid-template-columns:repeat(7, 1fr);grid-template-rows:repeat(11, 1fr);max-width:100vw;max-height:100vh;font-family:"Giorgia", serif;font-size:1rem;font-weight:400;background-color:rgb(250,200,200)}.header{grid-column:1 / 8;grid-row:1 / 2}.aside{grid-column:1 / 3;grid-row:2 / 6}.main{grid-column:3 / 8;grid-row:2 / 12}.footer{grid-column:1 / 3;grid-row:6 / 12}header{padding:0.5rem 0;margin:0 1.5rem;border-bottom:2px solid black}header h1{font-size:1.8rem;font-weight:800}header h2{font-size:0.9rem;font-weight:300}main{margin:0;padding:0}#textbox{font-family:"Verdana", "Geneva", sans-serif;font-size:1rem;font-weight:300;line-height:1.5rem;display:block;height:calc(100% - 6rem);width:calc(100% - 3rem);padding:1rem 1.5rem;background-color:rgba(0, 0, 0, 0);border:none;outline:none;resize:none;overflow:auto;scrollbar-width:thin;scrollbar-color:black rgba(0, 0, 0, 0.2)}::selection{color:white;background:black}::-moz-selection{color:white;background:black}#button{font-family:"Giorgia", serif;font-size:1rem;font-weight:400;letter-spacing:0.08rem;text-align:center;color:black;background-color:white;border:0.1rem solid black;display:block;padding:0.4rem 1.3rem;margin-left:calc((100vw - (100vw / 7 * 2)) / 2 - 1rem);transform:translate(-50%, -50%);margin-top:1.5rem;cursor:pointer;transition:0.1s}#button:hover{border:0.2rem solid black}aside{padding:1.3rem 1rem;margin-left:1.5rem;overflow:auto;scrollbar-width:thin;scrollbar-color:white rgba(225, 255, 255, 0.2);color:white;background-color:black}aside div{margin-bottom:1rem}footer{padding:1rem;margin-left:1.5rem;overflow:auto;scrollbar-width:thin;scrollbar-color:white rgba(255, 255, 255, 0.2);color:white;background-color:black}#info{color:white;text-decoration:none;font-family:"Verdana", "Geneva", sans-serif;font-weight:400}footer small{display:block;line-height:1.2rem;letter-spacing:0.01rem;margin-top:1rem;margin-bottom:0.6rem}footer small a{color:white;text-decoration:underline}.badge{margin-top:0.3rem}.noscript{position:absolute;margin-top:-100vh;margin-left:0;width:calc(100vw - 4rem - 1.4rem);height:calc(100vh - 4rem - 1.4rem);padding:2rem;border:0.7rem solid red;font-family:"Verdana", "Geneva", sans-serif;font-size:1.1rem;font-weight:400;line-height:1.5rem;color:black;background-color:rgb(245, 245, 245)}.noscript p{padding-left:1rem;border-left:0.2rem solid red}.noscript button{display:block;padding:0.4rem 0.9rem;margin-left:calc(1rem + 0.2rem);border:0.17rem solid red;text-align:center;font-size:1.1rem;background-color:rgba(0, 0, 0, 0);color:black;box-shadow:0 0 0.5rem rgb(80, 80, 80);cursor:pointer;transition:0.15s}.noscript button:hover{box-shadow:0 0 0 grey}.noscript-link{margin-left:calc(1rem + 0.2rem);text-decoration:none}.noscript-link:active,.noscript-link:hover{outline-color:red;outline-width:0.2rem;outline-style:dotted;outline-offset:0.3rem}@media only screen and (max-width: 62rem){body{display:grid;grid-template-areas:"header" "aside" "main" "footer";grid-template-rows:auto;max-width:100vw;height:auto;max-height:none}.header{grid-area:header}.aside{grid-area:aside}.main{grid-area:main}.footer{grid-area:footer}header{padding:1rem;margin:0;width:calc(100vw - 2rem)}header h1{font-size:1.6rem;font-weight:800}header h2{font-size:0.9rem;font-weight:300}main{margin:0;padding:0;width:100vw}#textbox{font-family:"Verdana", "Geneva", sans-serif;font-size:1rem;font-weight:300;line-height:1.5rem;display:block;width:calc(100% - 2rem);padding:1rem}#button{margin-left:calc(100vw / 2);transform:translateX(-50%);margin-top:0.4rem;padding:0.6rem 1.7rem}aside{padding:0.5rem 1rem;margin:0}aside div{margin:0.5rem 0}footer{padding:1rem;margin:0}footer small{line-height:1.2rem;letter-spacing:0.01rem;margin:1rem 0 0.6rem}.badge{margin-top:0.3rem}.noscript{position:fixed;margin-top:0;margin-left:-100vw;width:calc(100vw - 1.5rem - 1rem);height:calc(100vh - 2rem - 1rem);padding:1rem 1rem 1rem 0.5rem;border:0.5rem solid red;font-size:1rem;font-weight:400;line-height:1.3rem}.noscript p{padding-left:0.5rem}.noscript button{width:calc(100vw - 3rem);margin-left:50%;transform:translateX(-50%);padding:0.7rem 0.9rem}.noscript-link{margin-left:0}}
+		</style>
+
+	</head>
+
+	<body>
+
+		<header class="header" role="banner">
+			<h1><a rel="nofollow" href="https://teo330.github.io/readometer" style="color: black; text-decoration: none;">Readometer</a></h1>
+			<h2>A tool to help you estimate the text read-time of a post, article or document.</h2>
+		</header>
+
+		<main class="main" role="main">
+
+			<textarea id="textbox" placeholder="Copy and paste (or write) your text here, then click the 'Calculate' button..." rows="15" autofocus required></textarea>
+			<button id="button" type="button" onclick="calcTime()">Calculate</button>
+
+		</main>
+
+		<aside class="aside" role="complementary">
+
+			<div>Number of words: <span id="spanWords"></span></div>
+
+			<div>Average read time: <span id="avgRead"></span> <span id="areAvgMins"></span></div>
+
+			<div>Minimum read time: <span id="minRead"></span> <span id="areMinMins"></span></div>
+
+			<div>Maximum read time: <span id="maxRead"></span> <span id="areMaxMins"></span></div>
+
+		</aside>
+
+		<footer class="footer" role="contentinfo">
+
+			<a id="info" rel="follow" href="https://github.com/teo330/readometer#readometer" title="Readometer - Info" target="_blank"><span style="color: orange; font-weight: 600;">:~/</span><span style="color: orange;">Info</span>$ <span id="blinker">&#9610;</span></a>
+			<script>
+				var blink_speed = 1100;
+				var t = setInterval(function () {
+					var blinker = document.getElementById('blinker');
+					blinker.style.visibility = (blinker.style.visibility == 'hidden' ? '' : 'hidden');
+				}, blink_speed);
+			</script>
+
+			<small>This tool is trackers/cookies free and open source, released under <a rel="license" target="_blank" href="https://github.com/teo330/readometer/blob/master/LICENSE">MIT License</a>. The source code is hosted on GitHub at <a rel="nofollow" target="_blank" href="https://github.com/teo330/readometer">teo330/readometer</a>.</small>
+
+			<div id="badges">
+				<a class="badge" href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fteo330%2Freadometer"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fteo330%2Freadometer"></a>
+				<br>
+				<img class="badge" alt="W3C Validation" src="https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fteo330.github.io%2Freadometer">
+				<br>
+				<img class="badge" alt="GitHub license" src="https://img.shields.io/github/license/teo330/readometer">
+				<br>
+				<img class="badge" alt="GitHub last commit" src="https://img.shields.io/github/last-commit/teo330/readometer">
+				<br>
+				<img class="badge" alt="Website status" src="https://img.shields.io/website?down_color=critical&down_message=down&up_color=success&up_message=up&url=https%3A%2F%2Fteo330.github.io%2Freadometer">
+			</div>
+
+		</footer>
+
+		<script type="text/javascript">
+			let specialCharacters=[".",",","-",":",";","·","@","#","?","'","$","%","£",'"',"!","€","^","<",">","~","-","°","+","=","¿","¡","¦","¬","±","`","*","_","/","\\","|","(",")","[","]","{","}"];console.log(specialCharacters.length);function calcTime(){console.clear();let textbox=document.getElementById("textbox").value;console.log("textbox: '"+textbox+"'");if(textbox.includes("\n")==true){console.log("replacing new lines with whitespace...");textbox=textbox.replace(/\n+/g," ");console.log("textbox: '"+textbox+"'")}console.log("ENTERING FOR LOOP...");for(let i=0;i<specialCharacters.length;i+=1){if(textbox.includes(specialCharacters[i])==true){console.log("replacing special characters...");textbox=textbox.replace(/[.,-:;·@#?'$%£"!€^<>~-°+=¿¡¦¬±`*\_\/\\\|\(\)\[\]\{\}]+/g," ");console.log("textbox: '"+textbox+"'")}}if(textbox.includes("  ")==true){console.log("removing redundant whitespaces...");textbox=textbox.replace(/\s\s+/g," ");console.log("textbox '"+textbox+"'")}console.log("trimming the whitespaces...");textbox=textbox.trim();console.log("textbox: '"+textbox+"'");let totWords=textbox.split(" ");console.log("totWords: "+totWords);totWords=totWords.length;console.log("totWords length: "+totWords);let spanWords=document.getElementById("spanWords");spanWords.innerHTML=totWords;let wpmAvg=200;let wpmMin=220;let wpmMax=180;let avgRead=document.getElementById("avgRead");console.log(avgRead);avgRead.innerHTML="~"+(parseInt(totWords/wpmAvg)+1);console.log("going to choose avg MIN/MINS...");let areAvgMins=document.getElementById("areAvgMins");if(parseInt(totWords/wpmAvg)==0){console.log("joined avg loop MIN...");areAvgMins.innerHTML="min"}else{console.log("joined avg loop MINS...");areAvgMins.innerHTML="mins"}let minRead=document.getElementById("minRead");console.log(minRead);minRead.innerHTML="~"+(parseInt(totWords/wpmMin)+1);console.log("going to choose min MIN/MINS...");let areMinMins=document.getElementById("areMinMins");if(parseInt(totWords/wpmMin)==0){console.log("joined min loop MIN...");areMinMins.innerHTML="min"}else{console.log("joined min loop MINS...");areMinMins.innerHTML="mins"}let maxRead=document.getElementById("maxRead");console.log(maxRead);maxRead.innerHTML="~"+(parseInt(totWords/wpmMax)+1);console.log("going to choose max MIN/MINS...");let areMaxMins=document.getElementById("areMaxMins");if(parseInt(totWords/wpmMax)==0){console.log("joined max loop MIN...");areMaxMins.innerHTML="min"}else{console.log("joined max loop MINS...");areMaxMins.innerHTML="mins"}}
+		</script>
+
+		<noscript>
+			<div class="noscript">
+				<p><b>Houston, we have a problem!</b></p>
+				<br>
+				<p>This webpage is built using HTML5 and CSS3. However the read time calculator is powered by JavaScript.<br>Make sure you enabled the scripts and refresh the page ;-)</p>
+				<br>
+				<p>Also note: this page does NOT contain any kind of cookie, tracker or ads. You don't have to trust me, feel free to use a trackers blocker plugin, such as Privacy Badger from the EFF.</p>
+				<br>
+				<br>
+				<button type="button" onclick="location.reload(true)">Roger. I enabled the scripts.</button>
+				<br>
+				<br>
+				<a class="noscript-link"rel="nofollow" href="https://github.com/teo330/readometer" title="Teo330 - Readometer | GitHub.com" target="_blank">Readometer source code on GitHub</a>
+			</div>
+		</noscript>
+
+	</body>
+</html>
