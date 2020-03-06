@@ -69,6 +69,9 @@ console.log("totWords length: " + totWords);
 ```
 is that it's easier to debug it, especially while dealing with the regular expressions (line 67, same file) and you want to be sure the syntax is correct so it's helpful to see the single words (array elememts) before they get counted.
 
+* Also, using the tool you probably noticed a not-so-cool background color.
+I know black and white would be more stylish however, as this tool is made also for those who want to write/edit their text instead of just copy and paste it, I decided to use a more "eye-friendly" background color (for those users who don't have programs like [Redshift](https://github.com/jonls/redshift)).
+
 ## [License](#license)
 [MIT License](https://github.com/teo330/readometer/blob/master/LICENSE)
 Thanks to the MIT License, you are free to use and share and do almost whatever you want with the code (more details on the link), but remembering to link to this repository (even if you use just a part of the code).
