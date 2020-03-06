@@ -3,7 +3,7 @@ A [smart](#why-another-read-time-calculator) tool to helps you estimate the read
 
 To see it in action (and use it) go to https://teo330.github.io/readometer
 
-<img alt="Website status" src="https://img.shields.io/website?down_color=critical&down_message=down&up_color=success&up_message=up&url=https%3A%2F%2Fteo330.github.io%2Freadometer"> <img alt="GitHub license" src="https://img.shields.io/github/license/teo330/readometer"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/teo330/readometer"> <a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fteo330%2Freadometer"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fteo330%2Freadometer"></a> <img alt="GitHub stars" src="https://img.shields.io/github/stars/teo330/readometer?style=social">
+<img alt="Website status" src="https://img.shields.io/website?down_color=critical&down_message=down&up_color=success&up_message=up&url=https%3A%2F%2Fteo330.github.io%2Freadometer"> <img alt="GitHub license" src="https://img.shields.io/github/license/teo330/readometer"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/teo330/readometer"> <a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fteo330%2Freadometer"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fteo330%2Freadometer"></a> <a class="badge" href="https://github.com/teo330/readometer/star"><img alt="GitHub stars" src="https://img.shields.io/github/stars/teo330/readometer?style=social"></a>
 
 * [Features and roadmap](#features-and-roadmap)
 * [Why another read-time calculator](why-another-read-time-calculator)
